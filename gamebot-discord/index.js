@@ -10,7 +10,8 @@ const client = new Client({
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
-        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.GuildMembers, // IMPORTANTE para eventos de membros
+        GatewayIntentBits.GuildMessageReactions,
     ]
 });
 
@@ -47,3 +48,4 @@ client.login(process.env.DISCORD_TOKEN);
 // Após criar o client, adicione:
 const loadEvents = require('./src/events/loadEvents');
 loadEvents(client);
+

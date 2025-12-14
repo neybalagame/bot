@@ -41,4 +41,9 @@ for (const file of eventFiles) {
 }
 
 // Conectar ao Discord
+
 client.login(process.env.DISCORD_TOKEN);
+
+// Após criar o client, adicione:
+const loadEvents = require('./src/events/loadEvents');
+loadEvents(client);
